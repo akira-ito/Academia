@@ -1,0 +1,10 @@
+!SESSION 2014-03-15 14:05:00.547 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -data D:\Git\Academia -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2014-03-15 14:09:33.640
+!MESSAGE Port 8080 required by Server is already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
