@@ -10,29 +10,17 @@
 <XPD:BODY>
 <XPD:OBJ name="DocumentElement" type="UMLProject" guid="4POAuFz4DE+BLjna9CRr+gAA">
 <XPD:ATTR name="Title" type="string">Untitled</XPD:ATTR>
-<XPD:ATTR name="#OwnedElements" type="integer">2</XPD:ATTR>
+<XPD:ATTR name="#OwnedElements" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedElements[0]" type="UMLModel" guid="11G/e44gjEul2U2ukwPrbAAA">
 <XPD:ATTR name="Name" type="string">Requirements</XPD:ATTR>
 <XPD:REF name="Namespace">4POAuFz4DE+BLjna9CRr+gAA</XPD:REF>
-<XPD:ATTR name="#OwnedElements" type="integer">2</XPD:ATTR>
-<XPD:OBJ name="OwnedElements[0]" type="UMLModel" guid="dqN8ieqszUuIxZ+aBqpPzQAA">
-<XPD:ATTR name="Name" type="string">Business Concept Model</XPD:ATTR>
-<XPD:REF name="Namespace">11G/e44gjEul2U2ukwPrbAAA</XPD:REF>
-<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
-<XPD:OBJ name="OwnedDiagrams[0]" type="UMLClassDiagram" guid="Igql/8jPdUCv/QXecGhKDwAA">
-<XPD:ATTR name="Name" type="string">Business Concept Diagram</XPD:ATTR>
-<XPD:REF name="DiagramOwner">dqN8ieqszUuIxZ+aBqpPzQAA</XPD:REF>
-<XPD:OBJ name="DiagramView" type="UMLClassDiagramView" guid="Vkxqk57hTU+uhyzxpZaE3AAA">
-<XPD:REF name="Diagram">Igql/8jPdUCv/QXecGhKDwAA</XPD:REF>
-</XPD:OBJ>
-</XPD:OBJ>
-</XPD:OBJ>
-<XPD:OBJ name="OwnedElements[1]" type="UMLModel" guid="eFo5yjQIpUO6ptD9JY687AAA">
+<XPD:ATTR name="#OwnedElements" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedElements[0]" type="UMLModel" guid="eFo5yjQIpUO6ptD9JY687AAA">
 <XPD:ATTR name="Name" type="string">Use Case Model</XPD:ATTR>
 <XPD:REF name="Namespace">11G/e44gjEul2U2ukwPrbAAA</XPD:REF>
 <XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedDiagrams[0]" type="UMLUseCaseDiagram" guid="sX8PzAGWvkubeaEidLJXwAAA">
-<XPD:ATTR name="Name" type="string">Use Case Diagram</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">CasoUso</XPD:ATTR>
 <XPD:ATTR name="DefaultDiagram" type="boolean">True</XPD:ATTR>
 <XPD:REF name="DiagramOwner">eFo5yjQIpUO6ptD9JY687AAA</XPD:REF>
 <XPD:OBJ name="DiagramView" type="UMLUseCaseDiagramView" guid="I487aWgQb0iViM71cdybFgAA">
@@ -1673,7 +1661,7 @@
 <XPD:OBJ name="OwnedViews[34]" type="UMLAssociationView" guid="VL6fsHiHvUuATAGLX876kAAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">154,424;225,403</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">154,425;226,403</XPD:ATTR>
 <XPD:REF name="Model">cNB6YzWZ4E6FzEXvH/z8owAA</XPD:REF>
 <XPD:REF name="Head">PR6GheTrE0eTNeG3CDIpGAAA</XPD:REF>
 <XPD:REF name="Tail">HLS6Pi4zskm+diIvlmFPaQAA</XPD:REF>
@@ -2910,49 +2898,6 @@
 <XPD:REF name="Views[2]">qzo90sjzcES9E6oStfrCZQAA</XPD:REF>
 <XPD:REF name="Views[3]">adIREPyYtEq6W66+89Y8ZwAA</XPD:REF>
 </XPD:OBJ>
-</XPD:OBJ>
-</XPD:OBJ>
-</XPD:OBJ>
-<XPD:OBJ name="OwnedElements[1]" type="UMLModel" guid="jEy13i2CDEKoN2zQiQU70wAA">
-<XPD:ATTR name="Name" type="string">Specifications</XPD:ATTR>
-<XPD:REF name="Namespace">4POAuFz4DE+BLjna9CRr+gAA</XPD:REF>
-<XPD:ATTR name="#OwnedElements" type="integer">4</XPD:ATTR>
-<XPD:OBJ name="OwnedElements[0]" type="UMLModel" guid="0mqBSuYjqE6po5FEysZwmgAA">
-<XPD:ATTR name="Name" type="string">Business Type Model</XPD:ATTR>
-<XPD:REF name="Namespace">jEy13i2CDEKoN2zQiQU70wAA</XPD:REF>
-<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
-<XPD:OBJ name="OwnedDiagrams[0]" type="UMLClassDiagram" guid="BtybUXgjCUayLWPQVXTySgAA">
-<XPD:ATTR name="Name" type="string">Business Type Model Diagram</XPD:ATTR>
-<XPD:REF name="DiagramOwner">0mqBSuYjqE6po5FEysZwmgAA</XPD:REF>
-<XPD:OBJ name="DiagramView" type="UMLClassDiagramView" guid="RRcnj2nDzk+4vRaXBUO6hwAA">
-<XPD:REF name="Diagram">BtybUXgjCUayLWPQVXTySgAA</XPD:REF>
-</XPD:OBJ>
-</XPD:OBJ>
-</XPD:OBJ>
-<XPD:OBJ name="OwnedElements[1]" type="UMLModel" guid="2QlYqQ2/xEWjFlqVkqdqcAAA">
-<XPD:ATTR name="Name" type="string">Interface Specifications</XPD:ATTR>
-<XPD:REF name="Namespace">jEy13i2CDEKoN2zQiQU70wAA</XPD:REF>
-</XPD:OBJ>
-<XPD:OBJ name="OwnedElements[2]" type="UMLModel" guid="nnBIlsVB9E6RxtkAkvd4hAAA">
-<XPD:ATTR name="Name" type="string">Component Specifications</XPD:ATTR>
-<XPD:REF name="Namespace">jEy13i2CDEKoN2zQiQU70wAA</XPD:REF>
-</XPD:OBJ>
-<XPD:OBJ name="OwnedElements[3]" type="UMLModel" guid="O7CwmK77bUCGV4899dlJqAAA">
-<XPD:ATTR name="Name" type="string">Component Architecture</XPD:ATTR>
-<XPD:REF name="Namespace">jEy13i2CDEKoN2zQiQU70wAA</XPD:REF>
-<XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
-<XPD:OBJ name="OwnedDiagrams[0]" type="UMLComponentDiagram" guid="39+RFPIBd0iKWwrDavkIVQAA">
-<XPD:ATTR name="Name" type="string">Component Architecture Diagram</XPD:ATTR>
-<XPD:ATTR name="DefaultDiagram" type="boolean">True</XPD:ATTR>
-<XPD:REF name="DiagramOwner">O7CwmK77bUCGV4899dlJqAAA</XPD:REF>
-<XPD:OBJ name="DiagramView" type="UMLComponentDiagramView" guid="16ZzkUyXkkiw0JPrd0UEDAAA">
-<XPD:REF name="Diagram">39+RFPIBd0iKWwrDavkIVQAA</XPD:REF>
-</XPD:OBJ>
-</XPD:OBJ>
-<XPD:ATTR name="#OwnedElements" type="integer">1</XPD:ATTR>
-<XPD:OBJ name="OwnedElements[0]" type="UMLModel" guid="G4iInb4wr0SEm2DjtatdswAA">
-<XPD:ATTR name="Name" type="string">Interactions</XPD:ATTR>
-<XPD:REF name="Namespace">O7CwmK77bUCGV4899dlJqAAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
 </XPD:OBJ>
