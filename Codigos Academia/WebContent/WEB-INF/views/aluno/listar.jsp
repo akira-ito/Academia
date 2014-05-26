@@ -30,9 +30,10 @@
 </html>
 <script>
 function aaa(id){
-	alert("plll");	
-	window.location="?pagina=editaAluno&id="id;
-	return;
+	var a = confirm("Press a button!");
+	if (a){
+		window.location="?pagina=editaAluno&id="+id;
+	}
 }
 $(document).ready(function(){
 // 	alert("KK");
