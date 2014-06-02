@@ -1,6 +1,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <form:form action="editarAluno" commandName="aluno"  >
 <table width="100%">
+	<form:hidden path="id"/>
 	<tr>
 		<td><form:label path="nome" cssErrorClass="erro" >Nome:</form:label></td>
 		<td><form:errors path="nome" cssClass="text-warning" element="div"/><form:input path="nome" cssErrorClass="erro" /></td>

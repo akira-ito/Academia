@@ -6,6 +6,7 @@ import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -30,15 +31,28 @@ public class AlunoDaoImpl implements AlunoDao {
 	public List<Aluno> listar() {
 		return ((List<Aluno>) getCriteria(Aluno.class).list());
 	}
-	
+
 	@Override
 	public Aluno buscar(Long id) {
-		return (Aluno) getCriteria(Aluno.class).add(Restrictions.eq("id", id)).uniqueResult();
+		return (Aluno) getCriteria(Aluno.class).add(Restrictions.eq("id", id))
+				.uniqueResult();
 	}
-	
+
 	@Override
 	public Aluno editar(Aluno aluno) {
 		return (Aluno) getSession().merge(aluno);
+	}
+
+	@Override
+	public void excluir(Long id) {
+		Aluno aluno = (Aluno) getSession().load(Aluno.class, id);
+		getSession().delete(aluno);
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Aluno> buscarPorNome(String nome, MatchMode mode) {
+		return (List<Aluno>) getCriteria(Aluno.class).add(Restrictions.like("nome", nome, mode)).list();
 	}
 
 	private Criteria getCriteria(Class<?> clazz) {
