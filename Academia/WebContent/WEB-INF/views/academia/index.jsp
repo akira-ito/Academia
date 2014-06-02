@@ -20,7 +20,7 @@
 		<tr class="trTopo">
 			<td></td>
 			<td width="240px" class="tdMenu"><div class="logo">
-								<a href="/academia"><img alt="Logo" src="academia/imagem/logo.png" width="200px"
+								<a href="./"><img alt="Logo" src="academia/imagem/logo.png" width="200px"
 									height="200px"></a>
 							</div>
 			</td>

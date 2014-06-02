@@ -11,6 +11,8 @@ import sjc.fatec.padbi.aluno.model.Aluno;
 @Component
 public class AlunoContext {
 	private List<Aluno> alunosBuscado;
+	/** Avaliação **/
+	private Aluno aluno;
 
 	public List<Aluno> getAlunosBuscado() {
 		return alunosBuscado;
@@ -19,5 +21,13 @@ public class AlunoContext {
 	public void setAlunosBuscado(List<Aluno> alunosBuscado) {
 		this.alunosBuscado = alunosBuscado;
 	}
-	
+
+	public Aluno getAluno() {
+		return aluno;
+	}
+
+	public void setAluno(Aluno aluno) {
+		this.aluno = aluno;
+	}
+
 }

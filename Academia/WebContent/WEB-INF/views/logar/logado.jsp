@@ -10,7 +10,7 @@
 				<td><a href="?pagina=listarAluno"><div>Listar Alunos</div> </a></td>
 			</tr>
 			<tr>
-				<td><a href="?pagina=avaliarAluno"><div>Avaliar Aluno</div> </a></td>
+				<td><a href="?pagina=avaliarAluno/0"><div>Avaliar Aluno</div> </a></td>
 			</tr>
 		</table></td>
 	</tr>

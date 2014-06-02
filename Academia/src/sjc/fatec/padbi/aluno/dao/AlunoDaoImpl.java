@@ -1,6 +1,7 @@
 package sjc.fatec.padbi.aluno.dao;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Criteria;
@@ -52,7 +53,9 @@ public class AlunoDaoImpl implements AlunoDao {
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Aluno> buscarPorNome(String nome, MatchMode mode) {
-		return (List<Aluno>) getCriteria(Aluno.class).add(Restrictions.like("nome", nome, mode)).list();
+		List<Aluno> alunos = (List<Aluno>) getCriteria(Aluno.class).add(Restrictions.like("nome", nome, mode)).list();
+		
+		return alunos == null? new ArrayList<Aluno>(): alunos;
 	}
 
 	private Criteria getCriteria(Class<?> clazz) {

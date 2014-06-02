@@ -34,10 +34,7 @@ public class LoginController {
 	}
 	
 	@RequestMapping("/logar")
-	public String logar(@Valid Login login, BindingResult result, Model model, HttpSession session){
-		if (result.hasErrors()){
-			return "forward:index";
-		}
+	public String logar(Login login, Model model, HttpSession session){
 		
 		Ator ator = dao.logar(login);
 		if (ator == null){
