@@ -1,0 +1,11 @@
+INDEX VERSION 1.3+D:\Git\Academia\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3827011339.index
+4110607196.index
+2069477723.index
+3979873617.index
+516751681.index
+697331149.index
+929536611.index
+1748551155.index
+2281531899.index
+2659767511.index
