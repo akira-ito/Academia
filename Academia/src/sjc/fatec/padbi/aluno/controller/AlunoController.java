@@ -3,6 +3,7 @@ package sjc.fatec.padbi.aluno.controller;
 import static java.lang.Boolean.TRUE;
 import static org.hibernate.criterion.MatchMode.ANYWHERE;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import sjc.fatec.padbi.academia.dao.ObjetivoDao;
 import sjc.fatec.padbi.academia.model.Objetivo;
+import sjc.fatec.padbi.academia.model.Perfil;
 import sjc.fatec.padbi.aluno.dao.AlunoDao;
 import sjc.fatec.padbi.aluno.model.Aluno;
 
@@ -123,7 +125,10 @@ public class AlunoController {
 				return avaliar(1, context.getAluno().getId(), model);
 			Objetivo objetivo = objetivoDao.buscar(id);
 			
+			model.addAttribute("perfils", objetivo.getPerfils() == null ? new ArrayList<Perfil>():objetivo.getPerfils());
+			model.addAttribute("series", objetivo.getSeries());
 			context.setObjetivo(objetivo);
+			return "avaliar/avaliar";
 		default:
 			return null;
 		}

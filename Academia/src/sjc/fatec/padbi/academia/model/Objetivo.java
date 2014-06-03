@@ -1,11 +1,14 @@
 package sjc.fatec.padbi.academia.model;
 
+import static javax.persistence.FetchType.EAGER;
 import static javax.persistence.TemporalType.DATE;
+import static org.hibernate.annotations.FetchMode.SUBSELECT;
 
 import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -14,6 +17,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -32,11 +37,15 @@ public class Objetivo {
 	@Length(min = 10, message = "{Min.objetivo.descricao}")
 	@Lob
 	private String descricao;
-	@OneToMany(mappedBy = "objetivo")
+	@OneToMany(mappedBy = "objetivo", fetch = EAGER)
+	@Fetch(SUBSELECT)
 	private List<Perfil> perfils;
 	@ManyToOne
 	@JoinColumn(name = "idAluno")
 	private Aluno aluno;
+	@OneToMany(mappedBy = "objetivo", fetch = EAGER)
+	@Fetch(SUBSELECT)
+	private List<Serie> series;
 
 	public Long getId() {
 		return id;
@@ -84,6 +93,14 @@ public class Objetivo {
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+
+	public List<Serie> getSeries() {
+		return series;
+	}
+
+	public void setSeries(List<Serie> series) {
+		this.series = series;
 	}
 
 }

@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.Transient;
 
 @Entity
 @Inheritance(strategy = TABLE_PER_CLASS)
@@ -63,6 +64,11 @@ public class Modalidade {
 
 	public void setTrabalhos(List<TrabalhoModalidade> trabalhos) {
 		this.trabalhos = trabalhos;
+	}
+	
+	@Transient
+	public String getTipoModalidade(){
+		return "Modalidade";
 	}
 
 }

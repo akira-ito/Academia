@@ -36,7 +36,8 @@ public class ObjetivoDaoImpl implements ObjetivoDao {
 	
 	@Override
 	public Objetivo buscar(Long id) {
-		return (Objetivo) getSession().get(Objetivo.class, id);
+		Objetivo objetivo = (Objetivo) getCriteria(Objetivo.class).add(Restrictions.eq("id", id)).setMaxResults(1).uniqueResult();
+		return objetivo;
 	}
 
 	private Criteria getCriteria(Class<?> clazz) {

@@ -1,6 +1,5 @@
 package sjc.fatec.padbi.academia.model;
 
-import static javax.persistence.FetchType.LAZY;
 import static javax.persistence.TemporalType.DATE;
 
 import java.util.Date;
@@ -24,7 +23,7 @@ public class Perfil {
 	private Double peso;
 	private Double porcGordura;
 	private Double massCorporal;
-	@ManyToOne(fetch = LAZY)
+	@ManyToOne
 	@JoinColumn(name = "idObjetivo")
 	private Objetivo objetivo;
 
