@@ -1,5 +1,6 @@
 package sjc.fatec.padbi.academia.dao;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,8 +25,18 @@ public class ObjetivoDaoImpl implements ObjetivoDao {
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Objetivo> buscarPorAluno(Long id) {
-		List<Objetivo> objetivos = (List<Objetivo>) getCriteria(Objetivo.class).add(Restrictions.eq("id", id)).addOrder(Order.desc("inicio")).list();
+		List<Objetivo> objetivos = (List<Objetivo>) getCriteria(Objetivo.class).add(Restrictions.eq("aluno.id", id)).addOrder(Order.desc("inicio")).list();
 		return objetivos == null ? new ArrayList<Objetivo>(): objetivos;
+	}
+	
+	@Override
+	public Serializable cadastrar(Objetivo objetivo) {
+		return getSession().save(objetivo);
+	}
+	
+	@Override
+	public Objetivo buscar(Long id) {
+		return (Objetivo) getSession().get(Objetivo.class, id);
 	}
 
 	private Criteria getCriteria(Class<?> clazz) {

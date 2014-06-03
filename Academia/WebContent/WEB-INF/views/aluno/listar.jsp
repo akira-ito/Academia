@@ -2,6 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="sp"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <table width="100%">
 	<tr>
 		<td valign="middle" align="center"><form action="buscarAluno">
@@ -38,28 +39,28 @@
 				<tbody>
 					<c:if test="${empty alunos }">
 						<tr>
-							<td colspan="4" align="center"><i style="text-align: center"><sp:message
+							<td colspan="5" align="center"><i style="text-align: center"><sp:message
 										code="alunoNaoEncontrado" /> </i></td>
 						</tr>
 					</c:if>
-					<c:forEach items="${alunos }" var="aluno">
-						<tr>
-							<td>${aluno.nome }</td>
-							<td>${aluno.sexo.nome }</td>
+						<c:forEach items="${alunos }" var="aluno">
+							<tr>
+								<td>${aluno.nome }</td>
+								<td>${aluno.sexo.nome }</td>
 
-							<c:choose>
-								<c:when test="${not avaliar }">
-									<td><a href="?pagina=editaAluno&id=${aluno.id }">Editar</a>
-									</td>
-									<td><a href="#"
-										onclick="confirm('Deseja realmente excluir?')?location='./excluirAluno?id=${aluno.id}':''">Excluir</a></td>
-								</c:when>
-								<c:otherwise>
-									<td><a href="./?id=${aluno.id }&pagina=avaliarAluno/1">Avaliar</a></td>
-								</c:otherwise>
-							</c:choose>
-						<tr>
-					</c:forEach>
+								<c:choose>
+									<c:when test="${not avaliar }">
+										<td><a href="?pagina=editaAluno&id=${aluno.id }">Editar</a>
+										</td>
+										<td><a href="#"
+											onclick="confirm('Deseja realmente excluir?')?location='./excluirAluno?id=${aluno.id}':''">Excluir</a></td>
+									</c:when>
+									<c:otherwise>
+										<td><a href="./?id=${aluno.id }&pagina=avaliarAluno/1">Avaliar</a></td>
+									</c:otherwise>
+								</c:choose>
+							<tr>
+						</c:forEach>
 				</tbody>
 			</table></td>
 	</tr>

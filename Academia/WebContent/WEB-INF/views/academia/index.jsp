@@ -20,13 +20,14 @@
 		<tr class="trTopo">
 			<td></td>
 			<td width="240px" class="tdMenu"><div class="logo">
-								<a href="./"><img alt="Logo" src="academia/imagem/logo.png" width="200px"
-									height="200px"></a>
-							</div>
-			</td>
+					<a href="./"><img alt="Logo" src="academia/imagem/logo.png"
+						width="200px" height="200px"></a>
+				</div></td>
 			<td width="600px" height="80px"><table width="100%">
 					<tr>
-						<td colspan="2" height="20px"><div class="mensagem"><sp:message code="${param.msg}" /> </div> </td>
+						<td colspan="2" height="20px"><div class="mensagem">
+								<sp:message code="${param.msg}" />
+							</div></td>
 					</tr>
 					<tr>
 						<td><div class="">
@@ -49,13 +50,19 @@
 					</tr>
 					<tr>
 						<td class="tdMenu">
-							<% if(session.getAttribute("atorLogado") == null){ %>
-								<% String login = new String("/login"); %>
-								<jsp:include page="<%= login%>" />
-							<%}else{ %>
-								<% String logado = new String("/logado"); %>
-								<jsp:include page="<%= logado%>" />
-							<%} %>
+							<%
+								if (session.getAttribute("atorLogado") == null) {
+							%> <%
+ 	String login = new String("/login");
+ %>
+							<jsp:include page="<%=login%>" /> <%
+ 	} else {
+ %> <%
+ 	String logado = new String("/logado");
+ %>
+							<jsp:include page="<%=logado%>" /> <%
+ 	}
+ %>
 						</td>
 					</tr>
 				</table>
@@ -64,18 +71,22 @@
 				<table width="100%">
 					<tr>
 						<td width="20px" height="20px"></td>
-						<td></td>
+						<td><blockquote>
+								<h3>
+									<sp:message code="${param.pagina }"  /><small><sp:message code="${param.pagina }.sub" /></small>
+								</h3>
+							</blockquote></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>
-							<% String pagina = request.getParameter("pagina");
-							if (pagina == null || pagina.isEmpty())
-								pagina = "home.jsp";
-							else
-								pagina = "/"+pagina;
-							%>
-							<jsp:include page="<%=pagina %>"></jsp:include>
+							<%
+								String pagina = request.getParameter("pagina");
+								if (pagina == null || pagina.isEmpty())
+									pagina = "home.jsp";
+								else
+									pagina = "/" + pagina;
+							%> <jsp:include page="<%=pagina%>"></jsp:include>
 						</td>
 					</tr>
 				</table>
@@ -83,7 +94,8 @@
 		</tr>
 		<tr class="trRodape">
 			<td></td>
-			<td colspan="2" height="50px"><center>Todos os direitos autorais: MegaSoft - 2014 </center></td>
+			<td colspan="2" height="50px"><center>Todos os direitos
+					autorais: MegaSoft - 2014</center></td>
 			<td></td>
 		</tr>
 	</table>

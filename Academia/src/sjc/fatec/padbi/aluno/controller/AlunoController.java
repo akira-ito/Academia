@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -22,6 +23,7 @@ import sjc.fatec.padbi.aluno.dao.AlunoDao;
 import sjc.fatec.padbi.aluno.model.Aluno;
 
 @Controller
+@Scope("request")
 public class AlunoController {
 
 	@Autowired
@@ -108,14 +110,20 @@ public class AlunoController {
 			model.addAttribute("pagina", "listarAluno");
 			return listar(model);
 		case 1:
-			Aluno aluno = dao.buscar(id);
 			if (id == null)
-				return avaliar(Integer.valueOf(0), Long.valueOf(0), model);
+				return avaliar(0, 0L, model);
+			Aluno aluno = dao.buscar(id);
 			
 			context.setAluno(aluno);
 			List<Objetivo> objetivos = objetivoDao.buscarPorAluno(aluno.getId());
-			model.addAttribute(objetivos);
+			model.addAttribute("objetivos", objetivos);
 			return "academia/objetivo";
+		case 2:
+			if (id == null)
+				return avaliar(1, context.getAluno().getId(), model);
+			Objetivo objetivo = objetivoDao.buscar(id);
+			
+			context.setObjetivo(objetivo);
 		default:
 			return null;
 		}

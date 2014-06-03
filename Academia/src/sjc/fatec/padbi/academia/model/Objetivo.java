@@ -1,6 +1,6 @@
 package sjc.fatec.padbi.academia.model;
 
-import static javax.persistence.TemporalType.TIME;
+import static javax.persistence.TemporalType.DATE;
 
 import java.util.Date;
 import java.util.List;
@@ -14,6 +14,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import sjc.fatec.padbi.aluno.model.Aluno;
@@ -23,11 +24,12 @@ public class Objetivo {
 	@Id
 	@GeneratedValue
 	private Long id;
-	@NotEmpty(message="{NotEmpty.objetivo.nome}")
+	@NotEmpty(message = "{NotEmpty.objetivo.nome}")
 	private String nome;
-	@Temporal(TIME)
+	@Temporal(DATE)
 	private Date inicio;
 	@NotEmpty(message = "{NotEmpty.objetivo.descricao}")
+	@Length(min = 10, message = "{Min.objetivo.descricao}")
 	@Lob
 	private String descricao;
 	@OneToMany(mappedBy = "objetivo")
@@ -74,6 +76,14 @@ public class Objetivo {
 
 	public void setAluno(Aluno aluno) {
 		this.aluno = aluno;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
 }
