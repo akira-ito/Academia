@@ -24,6 +24,12 @@ public class AtorDaoImpl implements AtorDao {
 				.add(Restrictions.eq("login.senha", login.getSenha())).setMaxResults(1).uniqueResult();
 	}
 	
+	@Override
+	public Login buscarLogin(Long idAtor) {
+		Ator ator = (Ator) getCriteria(Ator.class).add(Restrictions.eq("id", idAtor)).setMaxResults(1).uniqueResult();
+		return ator.getLogin();
+	}
+	
 	private Criteria getCriteria(Class<?> clazz){
 		return sessionFactory.getCurrentSession().createCriteria(clazz);
 	}

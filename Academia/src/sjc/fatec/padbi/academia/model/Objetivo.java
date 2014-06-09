@@ -1,24 +1,23 @@
 package sjc.fatec.padbi.academia.model;
 
 import static javax.persistence.FetchType.EAGER;
-import static javax.persistence.TemporalType.DATE;
+import static javax.persistence.TemporalType.TIMESTAMP;
 import static org.hibernate.annotations.FetchMode.SUBSELECT;
 
 import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 import javax.persistence.Temporal;
 
 import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -31,20 +30,22 @@ public class Objetivo {
 	private Long id;
 	@NotEmpty(message = "{NotEmpty.objetivo.nome}")
 	private String nome;
-	@Temporal(DATE)
+	@Temporal(TIMESTAMP)
 	private Date inicio;
 	@NotEmpty(message = "{NotEmpty.objetivo.descricao}")
-	@Length(min = 10, message = "{Min.objetivo.descricao}")
+	@Length(min = 10, message = "{Length.objetivo.descricao}")
 	@Lob
 	private String descricao;
 	@OneToMany(mappedBy = "objetivo", fetch = EAGER)
 	@Fetch(SUBSELECT)
+	@OrderBy("dataColeta DESC")
 	private List<Perfil> perfils;
 	@ManyToOne
 	@JoinColumn(name = "idAluno")
 	private Aluno aluno;
 	@OneToMany(mappedBy = "objetivo", fetch = EAGER)
 	@Fetch(SUBSELECT)
+	@OrderBy
 	private List<Serie> series;
 
 	public Long getId() {

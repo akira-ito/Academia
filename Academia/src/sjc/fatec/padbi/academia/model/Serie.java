@@ -1,31 +1,40 @@
 package sjc.fatec.padbi.academia.model;
 
 import static javax.persistence.EnumType.STRING;
-import static javax.persistence.FetchType.LAZY;
+import static org.hibernate.annotations.FetchMode.SUBSELECT;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.validation.Valid;
+
+import org.hibernate.annotations.Fetch;
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 public class Serie {
 	@Id
 	@GeneratedValue
 	private Long id;
-	@ElementCollection
+	@ElementCollection(fetch = FetchType.EAGER)
 	@Enumerated(STRING)
+	@Fetch(SUBSELECT)
 	@CollectionTable(name = "DiaSemana", joinColumns = @JoinColumn(name = "idSerie"))
+	@NotEmpty(message = "{NotEmpty.serie.semanas}")
 	private List<Semana> semanas;
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "idModalidade")
+	@Valid
 	private Modalidade modalidade;
 	@ManyToOne
 	@JoinColumn(name = "idObjetivo")

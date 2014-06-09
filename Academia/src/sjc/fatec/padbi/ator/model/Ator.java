@@ -2,6 +2,7 @@ package sjc.fatec.padbi.ator.model;
 
 import static javax.persistence.DiscriminatorType.STRING;
 import static javax.persistence.InheritanceType.SINGLE_TABLE;
+import static sjc.fatec.padbi.ator.model.Sexo.MASCULINO;
 
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Embedded;
@@ -34,12 +35,12 @@ public class Ator {
 	@NotNull(message="{NotNull.ator.nome}")
 	@NotEmpty(message="{NotEmpty.ator.nome}")
 	private String nome;
-	@Range(min=10, max=100, message="{Range.ator.idade}")
+	@Range(min=10, max=120, message="{Range.ator.idade}")
 	@NotNull(message="{NotEmpty.ator.idade}")
 	@Digits(fraction=0, integer = 3, message="{Digits.ator.idade}")
 	private Integer idade;
 	@Enumerated(EnumType.STRING)
-	private Sexo sexo;
+	private Sexo sexo = MASCULINO;
 	@Embedded
 	@Valid
 	private Login login;

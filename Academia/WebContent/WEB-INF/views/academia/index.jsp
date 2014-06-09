@@ -32,9 +32,9 @@
 					<tr>
 						<td><div class="">
 								<ul class="nav nav-pills ">
-									<li><a href="#">Sobre Academia</a></li>
-									<li><a href="#">Novidade</a></li>
-									<li><a href="#">Localização & Contato</a></li>
+									<li><a href="./?pagina=sobre">Sobre Academia</a></li>
+									<li><a href="./?pagina=novidade">Novidade</a></li>
+									<li><a href="./?pagina=localidade">Localização & Contato</a></li>
 								</ul>
 							</div></td>
 					</tr>
@@ -71,11 +71,11 @@
 				<table width="100%">
 					<tr>
 						<td width="20px" height="20px"></td>
-						<td><blockquote>
+						<td><c:if test="${not empty param.pagina }"> <blockquote>
 								<h3>
 									<sp:message code="${param.pagina }"  /><small><sp:message code="${param.pagina }.sub" /></small>
 								</h3>
-							</blockquote></td>
+							</blockquote></c:if></td>
 					</tr>
 					<tr>
 						<td></td>

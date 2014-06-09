@@ -4,6 +4,7 @@ import static java.lang.Boolean.TRUE;
 import static org.hibernate.criterion.MatchMode.ANYWHERE;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -20,9 +21,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import sjc.fatec.padbi.academia.dao.ObjetivoDao;
 import sjc.fatec.padbi.academia.model.Objetivo;
-import sjc.fatec.padbi.academia.model.Perfil;
+import sjc.fatec.padbi.academia.model.Semana;
+import sjc.fatec.padbi.academia.model.Serie;
 import sjc.fatec.padbi.aluno.dao.AlunoDao;
 import sjc.fatec.padbi.aluno.model.Aluno;
+import sjc.fatec.padbi.ator.dao.AtorDao;
+import sjc.fatec.padbi.ator.model.Login;
 
 @Controller
 @Scope("request")
@@ -32,6 +36,8 @@ public class AlunoController {
 	private AlunoDao dao;
 	@Autowired
 	private ObjetivoDao objetivoDao;
+	@Autowired
+	private AtorDao atorDao;
 	@Autowired
 	private AlunoContext context;
 
@@ -76,10 +82,12 @@ public class AlunoController {
 
 	@RequestMapping("/editarAluno")
 	public String editar(@Valid Aluno aluno, BindingResult result, Model model) {
-		if (result.hasErrors()) {
+		if (result.hasErrors() && !(result.hasFieldErrors("login.senha") || result.hasFieldErrors("login.usuario"))) {
 			return "forward:/?pagina=editaAluno";
 		}
-
+		
+		Login login = atorDao.buscarLogin(aluno.getId());
+		aluno.setLogin(login);
 		dao.editar(aluno);
 		model.addAttribute("msg", "alunoEditadoSucesso");
 		model.addAttribute("pagina", "listarAluno");
@@ -104,6 +112,13 @@ public class AlunoController {
 		return "redirect:/";
 	}
 	
+	@RequestMapping("/listarPerfils")
+	public String listarPerfils(Long id, Model model){
+		
+		
+		return "perfil/listar";
+	}
+	
 	@RequestMapping(value = "/avaliarAluno/{passo}")
 	public String avaliar(@PathVariable Integer passo, @RequestParam(required = false) Long id, Model model){
 		switch (passo) {
@@ -125,7 +140,17 @@ public class AlunoController {
 				return avaliar(1, context.getAluno().getId(), model);
 			Objetivo objetivo = objetivoDao.buscar(id);
 			
-			model.addAttribute("perfils", objetivo.getPerfils() == null ? new ArrayList<Perfil>():objetivo.getPerfils());
+			List<Semana> semanas = new ArrayList<Semana>(Arrays.asList(Semana
+					.values()));
+			Boolean tipoModalidade = false;
+			if (objetivo.getSeries() != null){
+				for (Serie serie : objetivo.getSeries()){
+					semanas.removeAll(serie.getSemanas());
+				}
+				tipoModalidade = objetivo.getSeries().size()==3;
+			}
+			model.addAttribute("addSerie", !(tipoModalidade || semanas.isEmpty()));
+			model.addAttribute("perfils", objetivo.getPerfils());
 			model.addAttribute("series", objetivo.getSeries());
 			context.setObjetivo(objetivo);
 			return "avaliar/avaliar";

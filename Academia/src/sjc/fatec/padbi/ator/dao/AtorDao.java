@@ -5,4 +5,5 @@ import sjc.fatec.padbi.ator.model.Login;
 
 public interface AtorDao {
 	public Ator logar(Login login);
+	public Login buscarLogin(Long idAtor);
 }

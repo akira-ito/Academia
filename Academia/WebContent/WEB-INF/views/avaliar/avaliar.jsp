@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -10,7 +11,7 @@
 <body>
 	<table width="100%">
 		<tr>
-			<td><a href="#">Coletar</a>
+			<td><a href="./?pagina=cadastroColeta">Coletar</a>
 				<table class="table table-bordered table-hover">
 					<thead>
 						<tr>
@@ -23,7 +24,7 @@
 					<tbody>
 						<c:forEach items="${perfils }" var="perfil">
 							<tr>
-								<td>${perfil.dataColeta }</td>
+								<td><fmt:formatDate value="${perfil.dataColeta }" pattern="dd/MM/yyyy"/></td>
 								<td>${perfil.peso }</td>
 								<td>${perfil.porcGordura }</td>
 								<td>${perfil.massCorporal }</td>
@@ -33,33 +34,39 @@
 				</table></td>
 		</tr>
 		<tr>
-			<td>
-				<a href="./?pagina=cadastroSerie">Serie</a>
-				<table class="table table-bordered table-hover">
+			<td><c:if test="${addSerie}">
+			<a href="./?pagina=cadastroSerie">Serie</a>
+			</c:if>
+				<table class="table table-bordered ">
 					<thead>
 						<tr>
-							<th>Modalidade</th>
-							<th>Pausa Intervalo</th>
+							<th width="250px" valign="middle">Modalidade</th>
+							<th width="55px" valign="middle">Pausa Intervalo</th>
+							<th valign="middle">Tipo</th>
 						</tr>
 					</thead>
 					<tbody>
 						<c:forEach items="${series }" var="serie">
-							<c:set var="modalidade" value="serie.modalidade" />
 							<tr>
-								<td>${modalidade.nome }</td>
-								<td>${modalidade.intervaloPausa }</td>
-							</tr>
-							<tr>
-								<td colspan="2">&mdash; <c:forEach items="${serie.semanas}"
-										var="semana">
+								<td colspan="3"><table width="100%" class="table table-condensed table-striped">
+
+										<tr>
+											<td width="248px">${serie.modalidade.nome}</td>
+											<td width="68px">${serie.modalidade.intervaloPausa }</td>
+											<td>${serie.modalidade.tipoModalidade }</td>
+										</tr>
+										<tr>
+											<td colspan="3">&mdash; <c:forEach
+													items="${serie.semanas}" var="semana">
 									${semana.semana }
 								</c:forEach>
-								</td>
+											</td>
+										</tr>
+									</table></td>
 							</tr>
 						</c:forEach>
 					</tbody>
-				</table>
-			</td>
+				</table></td>
 		</tr>
 	</table>
 </body>

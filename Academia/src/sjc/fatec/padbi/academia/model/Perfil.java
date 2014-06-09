@@ -1,6 +1,6 @@
 package sjc.fatec.padbi.academia.model;
 
-import static javax.persistence.TemporalType.DATE;
+import static javax.persistence.TemporalType.TIMESTAMP;
 
 import java.util.Date;
 
@@ -11,17 +11,25 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.Range;
 
 @Entity
-public class Perfil {
+public class Perfil{
 	@Id
 	@GeneratedValue
 	private Long id;
-	@Temporal(DATE)
+	@Temporal(TIMESTAMP)
 	private Date dataColeta;
 	@Column(precision = 2, scale = 3)
+	@NotNull(message="{NotNull.perfil.peso}")
 	private Double peso;
+	@NotNull(message="{NotNull.perfil.porcGordura}")
+	@Range(max = 100, min = 0, message = "{Range.perfil.porcGordura}")
 	private Double porcGordura;
+	@NotNull(message="{NotNull.perfil.massCorporal}")
+	@Range(max = 100, min = 0, message = "{Range.perfil.massCorporal}")
 	private Double massCorporal;
 	@ManyToOne
 	@JoinColumn(name = "idObjetivo")
