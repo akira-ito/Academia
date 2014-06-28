@@ -1,4 +1,6 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="sp"%>
 <form:form action="cadastrarAluno" commandName="aluno"  >
 <table width="100%">
 	<tr>
@@ -18,7 +20,7 @@
 	</tr>
 	<tr>
 		<td><form:label path="login.usuario" cssErrorClass="erro" >Usuario:</form:label></td>
-		<td><form:errors path="login.usuario" cssClass="text-warning" element="div" /><form:input path="login.usuario" cssErrorClass="erro"/> </td>
+		<td><c:if test="${!usuarioValido }"><font class="text-warning" > <sp:message code="usuarioExistente"></sp:message></font><br> </c:if> <form:errors path="login.usuario" cssClass="text-warning" element="div" /><form:input path="login.usuario" cssErrorClass="erro"/> </td>
 	</tr>
 	<tr>
 		<td><form:label path="login.senha" cssErrorClass="erro">Senha:</form:label></td>

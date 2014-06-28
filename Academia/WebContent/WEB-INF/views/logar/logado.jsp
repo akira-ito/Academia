@@ -24,10 +24,7 @@
 					} else {
 				%>
 				<tr>
-					<td><a href="./?pagina=listarPerfils&id=${atorLogado.id }">Perfils</a></td>
-				</tr>
-				<tr>
-					<td><a href="#">Series</a></td>
+					<td><a href="./?pagina=listarPerfils&id=${atorLogado.id }"><div>Perfils</div> </a></td>
 				</tr>
 				<%
 					}

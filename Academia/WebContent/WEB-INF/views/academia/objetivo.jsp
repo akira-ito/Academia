@@ -23,7 +23,7 @@
 		<tbody>
 				<c:if test="${empty objetivos }">
 				<tr>
-					<td colspan="3"><center><sp:message code="objetivoNaoEncontrado" /></center> </td>
+					<td colspan="4"><center><sp:message code="objetivoNaoEncontrado" /></center> </td>
 				</tr>
 				</c:if>
 				<c:forEach items="${objetivos }" var="objetivo">

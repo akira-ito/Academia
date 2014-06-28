@@ -19,8 +19,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import sjc.fatec.padbi.academia.dao.ColetaDao;
 import sjc.fatec.padbi.academia.dao.ObjetivoDao;
 import sjc.fatec.padbi.academia.model.Objetivo;
+import sjc.fatec.padbi.academia.model.Perfil;
 import sjc.fatec.padbi.academia.model.Semana;
 import sjc.fatec.padbi.academia.model.Serie;
 import sjc.fatec.padbi.aluno.dao.AlunoDao;
@@ -40,21 +42,30 @@ public class AlunoController {
 	private AtorDao atorDao;
 	@Autowired
 	private AlunoContext context;
+	@Autowired
+	private ColetaDao coletaDao;
 
 	@RequestMapping("/cadastroAluno")
 	public String cadastro(Model model, HttpServletRequest request) {
 		if (request.getAttribute("aluno") == null)
 			model.addAttribute(new Aluno());
+		if (request.getAttribute("usuarioValido") == null)
+			model.addAttribute("usuarioValido", true);
 		return "aluno/cadastrar";
 	}
 
 	@RequestMapping("/cadastrarAluno")
 	public String cadastrar(@Valid Aluno aluno, BindingResult result,
 			HttpServletRequest request, Model model) {
+		model.addAttribute("usuarioValido", true);
 		if (result.hasErrors()) {
 			return "forward:/?pagina=cadastroAluno";
 		}
-
+		
+		if (!dao.usuarioValido(aluno.getLogin().getUsuario())){
+			model.addAttribute("usuarioValido", false);
+			return "forward:/?pagina=cadastroAluno";
+		}
 		dao.cadastrar(aluno);
 		model.addAttribute("msg", "alunoCadastradoSucesso");
 		return "redirect:/";
@@ -115,7 +126,8 @@ public class AlunoController {
 	@RequestMapping("/listarPerfils")
 	public String listarPerfils(Long id, Model model){
 		
-		
+		List<Perfil> perfils = coletaDao.listar(id);
+		model.addAttribute("perfils", perfils);
 		return "perfil/listar";
 	}
 	

@@ -14,4 +14,5 @@ public interface AlunoDao {
 	public Aluno editar(Aluno aluno);
 	public void excluir(Long id);
 	public List<Aluno> buscarPorNome(String nome, MatchMode mode);
+	public Boolean usuarioValido(String usuario);
 }

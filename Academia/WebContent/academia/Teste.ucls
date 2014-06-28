@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.6" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <package id="1" language="java" name="sjc.fatec.padbi.academia" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/academia" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="1012" width="2166" x="27" y="13"/>    
+    <display autosize="false" stereotype="true" accessors="true"/>  
+  </package>  
+  <package id="2" language="java" name="sjc.fatec.padbi.academia.dao" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/academia/dao" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="436" width="880" x="42" y="73"/>    
+    <display autosize="false" stereotype="true" accessors="true"/>  
+  </package>  
+  <class id="3" language="java" name="sjc.fatec.padbi.academia.dao.SerieDaoImpl" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/academia/dao/SerieDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="175" y="215"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="sjc.fatec.padbi.academia.dao.ObjetivoDaoImpl" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/academia/dao/ObjetivoDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="395" y="230"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="5" language="java" name="sjc.fatec.padbi.academia.dao.ColetaDao" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/academia/dao/ColetaDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="596" y="415"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="6" language="java" name="sjc.fatec.padbi.academia.dao.ModalidadeDao" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/academia/dao/ModalidadeDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="811" y="408"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="7" language="java" name="sjc.fatec.padbi.academia.dao.SerieDao" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/academia/dao/SerieDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="166" y="408"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="8" language="java" name="sjc.fatec.padbi.academia.dao.ColetaDaoImpl" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/academia/dao/ColetaDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="606" y="222"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="sjc.fatec.padbi.academia.dao.ModalidadeDaoImpl" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/academia/dao/ModalidadeDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="811" y="215"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="10" language="java" name="sjc.fatec.padbi.academia.dao.ObjetivoDao" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/academia/dao/ObjetivoDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="395" y="423"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <package id="11" language="java" name="sjc.fatec.padbi.academia.model" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/academia/model" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="815" width="1128" x="961" y="73"/>    
+    <display autosize="false" stereotype="true" accessors="true"/>  
+  </package>  
+  <class id="12" language="java" name="sjc.fatec.padbi.academia.model.Perna" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/academia/model/Perna.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1070" y="424"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="sjc.fatec.padbi.academia.model.Peito" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/academia/model/Peito.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1074" y="560"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="sjc.fatec.padbi.academia.model.Serie" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/academia/model/Serie.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1754" y="261"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="sjc.fatec.padbi.academia.model.Modalidade" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/academia/model/Modalidade.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1428" y="347"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="sjc.fatec.padbi.academia.model.Perfil" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/academia/model/Perfil.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1729" y="655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="sjc.fatec.padbi.academia.model.Objetivo" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/academia/model/Objetivo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1983" y="340"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="sjc.fatec.padbi.academia.model.Ombro" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/academia/model/Ombro.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1077" y="716"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="19" language="java" name="sjc.fatec.padbi.academia.model.Semana" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/academia/model/Semana.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1408" y="721"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="20" language="java" name="sjc.fatec.padbi.academia.model.TrabalhoModalidade" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/academia/model/TrabalhoModalidade.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="143" x="989" y="165"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="sjc.fatec.padbi.academia.AcademiaController" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/academia/AcademiaController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="490" y="808"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="22" language="java" name="sjc.fatec.padbi.aluno" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/aluno" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="898" width="1198" x="2226" y="47"/>    
+    <display autosize="false" stereotype="true" accessors="true"/>  
+  </package>  
+  <package id="23" language="java" name="sjc.fatec.padbi.aluno.dao" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/aluno/dao" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="590" width="309" x="3054" y="115"/>    
+    <display autosize="false" stereotype="true" accessors="true"/>  
+  </package>  
+  <interface id="24" language="java" name="sjc.fatec.padbi.aluno.dao.AlunoDao" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/aluno/dao/AlunoDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3204" y="587"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="25" language="java" name="sjc.fatec.padbi.aluno.dao.AlunoDaoImpl" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/aluno/dao/AlunoDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3208" y="292"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="26" language="java" name="sjc.fatec.padbi.aluno.model" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/aluno/model" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="198" width="179" x="2267" y="79"/>    
+    <display autosize="false" stereotype="true" accessors="true"/>  
+  </package>  
+  <class id="27" language="java" name="sjc.fatec.padbi.aluno.model.Aluno" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/aluno/model/Aluno.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2344" y="192"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="28" language="java" name="sjc.fatec.padbi.aluno.controller" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/aluno/controller" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="642" width="476" x="2489" y="91"/>    
+    <display autosize="false" stereotype="true" accessors="true"/>  
+  </package>  
+  <class id="29" language="java" name="sjc.fatec.padbi.aluno.controller.AlunoController" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/aluno/controller/AlunoController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2704" y="300"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="sjc.fatec.padbi.aluno.controller.AlunoContext" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/aluno/controller/AlunoContext.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2704" y="585"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="31" language="java" name="sjc.fatec.padbi.funcionario" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/funcionario" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="578" width="1400" x="489" y="1199"/>    
+    <display autosize="false" stereotype="true" accessors="true"/>  
+  </package>  
+  <package id="32" language="java" name="sjc.fatec.padbi.funcionario.dao" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/funcionario/dao" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="458" width="326" x="561" y="1251"/>    
+    <display autosize="false" stereotype="true" accessors="true"/>  
+  </package>  
+  <interface id="33" language="java" name="sjc.fatec.padbi.funcionario.dao.FuncionarioDao" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/funcionario/dao/FuncionarioDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="720" y="1561"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="34" language="java" name="sjc.fatec.padbi.funcionario.dao.FuncionarioDaoImpl" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/funcionario/dao/FuncionarioDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="716" y="1416"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="35" language="java" name="sjc.fatec.padbi.funcionario.model" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/funcionario/model" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="374" width="281" x="942" y="1255"/>    
+    <display autosize="false" stereotype="true" accessors="true"/>  
+  </package>  
+  <class id="36" language="java" name="sjc.fatec.padbi.funcionario.model.Funcionario" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/funcionario/model/Funcionario.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="209" width="149" x="994" y="1352"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="37" language="java" name="sjc.fatec.padbi.funcionario.controller" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/funcionario/controller" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="370" width="473" x="1280" y="1271"/>    
+    <display autosize="false" stereotype="true" accessors="true"/>  
+  </package>  
+  <class id="38" language="java" name="sjc.fatec.padbi.funcionario.controller.FuncionarioController" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/funcionario/controller/FuncionarioController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="229" width="340" x="1346" y="1354"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="39" language="java" name="sjc.fatec.padbi.ator" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/ator" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="886" width="974" x="2118" y="1163"/>    
+    <display autosize="false" stereotype="true" accessors="true"/>  
+  </package>  
+  <package id="40" language="java" name="sjc.fatec.padbi.ator.dao" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/ator/dao" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="398" width="272" x="2790" y="1231"/>    
+    <display autosize="false" stereotype="true" accessors="true"/>  
+  </package>  
+  <class id="41" language="java" name="sjc.fatec.padbi.ator.dao.AtorDaoImpl" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/ator/dao/AtorDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2920" y="1376"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="42" language="java" name="sjc.fatec.padbi.ator.dao.AtorDao" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/ator/dao/AtorDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2938" y="1562"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <package id="43" language="java" name="sjc.fatec.padbi.ator.controller" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/ator/controller" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="274" width="307" x="2741" y="1703"/>    
+    <display autosize="false" stereotype="true" accessors="true"/>  
+  </package>  
+  <class id="44" language="java" name="sjc.fatec.padbi.ator.controller.LoginController" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/ator/controller/LoginController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2904" y="1872"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="45" language="java" name="sjc.fatec.padbi.ator.model" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/ator/model" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="706" width="459" x="2207" y="1251"/>    
+    <display autosize="false" stereotype="true" accessors="true"/>  
+  </package>  
+  <class id="46" language="java" name="sjc.fatec.padbi.ator.model.Login" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/ator/model/Login.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2310" y="1820"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="47" language="java" name="sjc.fatec.padbi.ator.model.Ator" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/ator/model/Ator.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2420" y="1508"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="48" language="java" name="sjc.fatec.padbi.ator.model.Sexo" project="Academia" 
+    file="/Academia/src/sjc/fatec/padbi/ator/model/Sexo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2574" y="1807"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <realization id="49">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <realization id="50">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <realization id="51">    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="42"/>  
+  </realization>  
+  <association id="52">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="53" name="objetivo"/>      
+      <multiplicity id="54" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="55">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="56" name="modalidadeDao"/>      
+      <multiplicity id="57" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="58">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="59" name="alunosBuscado"/>      
+      <multiplicity id="60" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="61">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <association id="62">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="63" name="objetivoDao"/>      
+      <multiplicity id="64" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="65">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="66" name="objetivoDao"/>      
+      <multiplicity id="67" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="68">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="69" name="coletaDao"/>      
+      <multiplicity id="70" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="71">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="72" name="series"/>      
+      <multiplicity id="73" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="74">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="75" name="trabalhos">        
+        <position height="18" width="53" x="1151" y="236"/>      
+      </attribute>      
+      <multiplicity id="76" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="77">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="78" name="objetivo"/>      
+      <multiplicity id="79" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="80">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="81" name="perfils"/>      
+      <multiplicity id="82" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="83">    
+    <end type="SOURCE" refId="44" navigable="false">      
+      <attribute id="84" name="dao"/>      
+      <multiplicity id="85" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="86">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <association id="87">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="88" name="alunoContext"/>      
+      <multiplicity id="89" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="90">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="91" name="modalidade">        
+        <position height="18" width="62" x="1238" y="266"/>      
+      </attribute>      
+      <multiplicity id="92" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="93">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="94" name="serieDao"/>      
+      <multiplicity id="95" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="96">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="97" name="atorDao"/>      
+      <multiplicity id="98" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="99">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="100" name="serie"/>      
+      <multiplicity id="101" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="102">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="103" name="dao"/>      
+      <multiplicity id="104" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="105">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="106" name="context"/>      
+      <multiplicity id="107" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="108">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <association id="109">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="110" name="modalidade"/>      
+      <multiplicity id="111" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="112">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <association id="113">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="114" name="aluno"/>      
+      <multiplicity id="115" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="116">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="117" name="objetivo"/>      
+      <multiplicity id="118" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="119">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="120" name="aluno"/>      
+      <multiplicity id="121" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="122">    
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="123" name="dao"/>      
+      <multiplicity id="124" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="33" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="125">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="126" name="objetivos"/>      
+      <multiplicity id="127" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="128">    
+    <end type="SOURCE" refId="47" navigable="false">      
+      <attribute id="129" name="login"/>      
+      <multiplicity id="130" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="46" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="131">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="33"/>  
+  </realization>  
+  <realization id="132">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="24"/>  
+  </realization>  
+  <generalization id="133">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="47"/>  
+  </generalization>  
+  <generalization id="134">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="47"/>  
+  </generalization>  
+  <realization id="135">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </realization>  
+  <association id="136">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="137" name="semanas"/>      
+      <multiplicity id="138" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="139">    
+    <end type="SOURCE" refId="47" navigable="false">      
+      <attribute id="140" name="sexo"/>      
+      <multiplicity id="141" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="48" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

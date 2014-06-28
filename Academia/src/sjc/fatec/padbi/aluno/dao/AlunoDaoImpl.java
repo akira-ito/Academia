@@ -14,6 +14,8 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import sjc.fatec.padbi.aluno.model.Aluno;
+import sjc.fatec.padbi.ator.model.Ator;
+import sjc.fatec.padbi.ator.model.Login;
 
 @Transactional
 @Repository
@@ -25,6 +27,12 @@ public class AlunoDaoImpl implements AlunoDao {
 	@Override
 	public Serializable cadastrar(Aluno aluno) {
 		return getSession().save(aluno);
+	}
+	
+	@Override
+	public Boolean usuarioValido(String usuario) {
+		Object ator = getCriteria(Ator.class).add(Restrictions.andeq("login.usuario", usuario)).setMaxResults(1).uniqueResult();
+		return ator == null;
 	}
 
 	@SuppressWarnings("unchecked")
